@@ -19,9 +19,20 @@ namespace Volga_IT_Belkov.Windows
     /// </summary>
     public partial class Request : Window
     {
-        public Request()
+        public Request(int id = 0)
         {
             InitializeComponent();
+            fioB.Text = $"{App.currentUser.lastName} {App.currentUser.firstName} {App.currentUser.middleName}";
+            emailB.Text = App.currentUser.email;
+            phoneNumberB.Text = "+" + App.currentUser.numbers[0].code + App.currentUser.numbers[0].number;
+            List<Models.ShortProduct> products = Services.ProductService.GetAllProducts();
+            productCb.ItemsSource = products;
+            productCb.SelectedItem = products.First(x => x.id == id);
+        }
+
+        private void SendButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Ничего не произошло! (кодер еще не сделал это)");
         }
     }
 }

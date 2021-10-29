@@ -55,7 +55,8 @@ namespace Volga_IT_Belkov.Windows
 
         private void ProductsLb_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show($"Вы выбрали {ProductsLb.SelectedIndex}");
+            Request r = new((ProductsLb.SelectedItem as Models.ShortProduct).id);
+            r.ShowDialog();
         }
 
         private void UserInfoSp_MouseDown(object sender, MouseButtonEventArgs e)
