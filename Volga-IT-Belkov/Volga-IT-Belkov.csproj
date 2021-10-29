@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>Volga_IT_Belkov</RootNamespace>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Img\application-icon.ico</ApplicationIcon>
+    <Version>1.2.4</Version>
+    <Authors>Vladislav Belkov (the1mason)</Authors>
+    <Company>DuDuck Limited</Company>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Img\application-icon.jpg" />
+    <None Remove="Img\avatar.png" />
+    <None Remove="Img\banner.png" />
+    <None Remove="Img\car-icon.png" />
+    <None Remove="Img\health-icon.png" />
+    <None Remove="Img\house-icon.png" />
+    <None Remove="Img\nicolas.png" />
+    <None Remove="Img\paper.jpg" />
+    <None Remove="Img\product.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Img\application-icon.jpg" />
+    <Resource Include="Img\avatar.png" />
+    <Resource Include="Img\banner.png" />
+    <Resource Include="Img\car-icon.png" />
+    <Resource Include="Img\health-icon.png" />
+    <Resource Include="Img\house-icon.png" />
+    <Resource Include="Img\nicolas.png" />
+    <Resource Include="Img\paper.jpg" />
+    <Resource Include="Img\product.png" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,20 @@
+﻿<Window x:Class="Volga_IT_Belkov.Windows.PersonalInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Volga_IT_Belkov.Windows"
+        mc:Ignorable="d"
+        Title="Информация о пользователе" MinHeight="450" MinWidth="800">
+    <Grid>
+		<StackPanel HorizontalAlignment="Left" Margin="20">
+			<Button Margin="0 0 0 15" HorizontalAlignment="Left" FontSize="15" Name="Back" Click="Back_Click">Назад</Button>
+			<Image x:Name="Avatar" Source="/Img/nicolas.png" Height="100" HorizontalAlignment="Left"></Image>
+			<Label x:Name="Name" FontSize="20" FontWeight="Bold">Юзернейм Юзернеймов Юзернеймович</Label>
+			<Label x:Name="Login" FontSize="20">Логин: 12391239913</Label>
+			<Label x:Name="Email" FontSize="16">Почта: duck@duck.co</Label>
+			<Label x:Name="BirthDate" FontSize="16">Дата рождения: 01.01.2004</Label>
+			<Label x:Name="PersonalStatus" FontSize="16">Статус проверки перс. данных: ПРОВЕРЕНО</Label>
+		</StackPanel>
+    </Grid>
+</Window>
