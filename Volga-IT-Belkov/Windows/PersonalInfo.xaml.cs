@@ -27,11 +27,19 @@ namespace Volga_IT_Belkov.Windows
             Login.Content = "Логин: " + App.currentUser.login;
             Email.Content = "EMail: " + App.currentUser.email;
             BirthDate.Content = "Дата рождения: " + App.currentUser.birthday.ToString("dd-MM-yyyy");
-            PersonalStatus.Content = "Статус проверки персональных данных: " + App.currentUser.personalDataStatus.nameRus; 
+            PersonalStatus.Content = "Статус проверки персональных данных: " + App.currentUser.personalDataStatus.nameRus;
+            App.currentUser.numbers.ForEach(x => PhoneNumbers.Text += "\n" + x.code + x.number);
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
+            this.Close();
+        }
+
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+            EditUser eu = new();
+            eu.Show();
             this.Close();
         }
     }

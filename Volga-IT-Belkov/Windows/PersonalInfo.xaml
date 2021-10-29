@@ -15,6 +15,8 @@
 			<Label x:Name="Email" FontSize="16">Почта: duck@duck.co</Label>
 			<Label x:Name="BirthDate" FontSize="16">Дата рождения: 01.01.2004</Label>
 			<Label x:Name="PersonalStatus" FontSize="16">Статус проверки перс. данных: ПРОВЕРЕНО</Label>
+            <TextBlock Padding="10 0 0 0" x:Name="PhoneNumbers" FontSize="15" TextWrapping="Wrap" >Номера телефона:</TextBlock>
+            <Button x:Name="Edit" HorizontalAlignment="Left" Margin="0 10 0 0" Click="Edit_Click">Изменить данные</Button>
 		</StackPanel>
     </Grid>
 </Window>

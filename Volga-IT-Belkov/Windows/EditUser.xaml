@@ -1,0 +1,25 @@
+﻿<Window x:Class="Volga_IT_Belkov.Windows.EditUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Volga_IT_Belkov.Windows"
+        mc:Ignorable="d"
+        Title="Изменить персональные данные" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="15 0">
+            <Label HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="20">Новый запрос</Label>
+            <Label HorizontalAlignment="Center" Background="#fff" Panel.ZIndex="1000" Padding="5 0" FontSize="16" Margin="0 0 0 -8">Фамилия</Label>
+            <TextBox x:Name="lastNameF" FontSize="17"/>
+            <Label HorizontalAlignment="Center" Background="#fff" Panel.ZIndex="1000" Padding="5 0" FontSize="16" Margin="0 0 0 -8">Имя</Label>
+            <TextBox x:Name="firstNameF" FontSize="17"/>
+            <Label HorizontalAlignment="Center" Background="#fff" Panel.ZIndex="1000" Padding="5 0" FontSize="16" Margin="0 0 0 -8">Отчество</Label>
+            <TextBox x:Name="middleNameF" FontSize="17"/>
+            <Label HorizontalAlignment="Center" Background="#fff" Panel.ZIndex="1000" Padding="5 0" FontSize="16" Margin="0 0 0 -8">EMail</Label>
+            <TextBox x:Name="emailF" FontSize="17"/>
+            <Label HorizontalAlignment="Center" Background="#fff" Panel.ZIndex="1000" Padding="5 0" FontSize="16" Margin="0 0 0 -8">Дата рождения</Label>
+            <TextBox x:Name="birthDateF" FontSize="17"/>
+            <Button Margin="0 20 0 0" x:Name="Save" Click="Save_Click">Отправить</Button>
+        </StackPanel>
+    </Grid>
+</Window>

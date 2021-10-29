@@ -52,6 +52,7 @@ namespace Volga_IT_Belkov.Windows
             }
             catch(Exception ex)
             {
+                MessageBox.Show("Ошибка сервера!\n" + ex.Message);
             }
 
             MessageBox.Show("Ваш запрос отправлен!\nНаши менеджеры рассмотрят Ваш запрос и свяжутся с вами по указанным контактным данным.");
