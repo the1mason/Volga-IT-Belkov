@@ -19,12 +19,9 @@ namespace Volga_IT_Belkov.Windows
 	/// </summary>
 	public partial class PersonalInfo : Window
 	{
-		private Models.LoginRespond loginData;
-		public PersonalInfo(Models.LoginRespond _loginData)
+		public PersonalInfo()
 		{
-			InitializeComponent();
-			loginData = _loginData;
-			
+			InitializeComponent();			
 		}
 
 		private void Back_Click(object sender, RoutedEventArgs e)

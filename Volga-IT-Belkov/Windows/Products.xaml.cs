@@ -22,16 +22,18 @@ namespace Volga_IT_Belkov.Windows
     public partial class Products : Window
     {
         private Models.Banner banner;
-        public Models.LoginRespond loginData;
         public Products(Models.LoginRespond _loginData)
         {
             InitializeComponent();
-            loginData = _loginData;
+            App.loginData = _loginData;
             banner = Services.BannerService.GetBanner();
             adBanner.Source = new BitmapImage(new Uri(banner.imageUri, UriKind.Relative));
             adBannerTitle.Content = banner.name;
             adBannerDescription.Text = banner.description;
 
+            App.currentUser = Services.UserService.GetUser(App.loginData.userId);
+            Avatar.Source = new BitmapImage(new Uri(App.currentUser.imageUri, UriKind.Relative));
+            UserName.Content = App.currentUser.firstName + " " + App.currentUser.lastName;
 
 
             if (banner == null)
@@ -58,7 +60,7 @@ namespace Volga_IT_Belkov.Windows
 
         private void UserInfoSp_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            PersonalInfo p = new(loginData);
+            PersonalInfo p = new(App.loginData);
             p.ShowDialog();
         }
 

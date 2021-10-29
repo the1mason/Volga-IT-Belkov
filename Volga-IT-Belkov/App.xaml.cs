@@ -13,5 +13,7 @@ namespace Volga_IT_Belkov
 	/// </summary>
 	public partial class App : Application
 	{
+		public static Models.LoginRespond loginData { get; set; }
+		public static Models.User currentUser { get; set; }
 	}
 }

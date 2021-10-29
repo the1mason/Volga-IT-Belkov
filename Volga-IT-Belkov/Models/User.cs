@@ -11,7 +11,7 @@ namespace Volga_IT_Belkov.Models
         public int id { get; set; }
         public string login { get; set; }
         public string email { get; set; }
-        public int matrixUserId { get; set; }
+        public int? matrixUserId { get; set; }
         public string customerLockStatus { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
@@ -21,7 +21,7 @@ namespace Volga_IT_Belkov.Models
         public DateTime birthday { get; set; }
         public string imageUri { get; set; }
         public PersonalDataStatus personalDataStatus { get; set; }
-        public List<Numbers> numbers { get; set; }
+        public List<Numbers>? numbers { get; set; }
         public int version { get; set; }
     }
 }

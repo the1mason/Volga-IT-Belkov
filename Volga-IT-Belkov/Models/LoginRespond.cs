@@ -12,7 +12,7 @@ namespace Volga_IT_Belkov.Models
 		public string token { get; set; }
 		public string refreshToken { get; set; }
 		public string matrixAccessToken { get; set; }
-		public string matrixUserId { get; set; }
+		public int? matrixUserId { get; set; }
 		public string matrixBaseUrl { get; set; }
 		public string matrixRoomId { get; set; }
 		public List<string> role { get; set; }
