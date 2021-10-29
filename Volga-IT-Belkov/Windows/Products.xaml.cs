@@ -60,7 +60,7 @@ namespace Volga_IT_Belkov.Windows
 
         private void UserInfoSp_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            PersonalInfo p = new(App.loginData);
+            PersonalInfo p = new();
             p.ShowDialog();
         }
 
