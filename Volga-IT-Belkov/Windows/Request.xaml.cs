@@ -42,12 +42,17 @@ namespace Volga_IT_Belkov.Windows
                 fio = fioB.Text,
                 email = emailB.Text,
                 comment = commentB.Text,
-                phoneNumber = phoneNumberB.Text,
+                phoneNumber = phoneNumberB.Text.Replace("+", String.Empty),
                 type = "NEW",
                 productId = (productCb.SelectedItem as Models.ShortProduct).id
             };
-
+            try
+            {
                 Services.RequestService.Send(request);
+            }
+            catch(Exception ex)
+            {
+            }
 
             MessageBox.Show("Ваш запрос отправлен!\nНаши менеджеры рассмотрят Ваш запрос и свяжутся с вами по указанным контактным данным.");
         }

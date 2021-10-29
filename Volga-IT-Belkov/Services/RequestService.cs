@@ -11,7 +11,7 @@ namespace Volga_IT_Belkov.Services
     {
         public static void Send(Models.NewRequest request)
         {
-            ApiService.Post("https://volgait.simbirsoft.dev/api/v1/mobile/request", JsonConvert.SerializeObject(request), App.loginData.token);
+            ApiService.Post("https://volgait.simbirsoft.dev/api/v1/mobile/request", JsonConvert.SerializeObject(request));
         }
     }
 }
