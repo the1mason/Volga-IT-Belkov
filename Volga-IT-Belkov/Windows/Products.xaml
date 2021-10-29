@@ -34,7 +34,7 @@
 				</TextBlock>
 			</StackPanel>
 			<Grid Grid.Row="1" Margin="15 10 15 0">
-				<StackPanel>
+				<StackPanel Panel.ZIndex="1000">
 					<Label FontWeight="Bold" FontSize="20" Padding="0">Список продуктов</Label>
 					<Label Padding="0">Кликните на продукт 2 раза, чтобы оформить заявку</Label>
 				</StackPanel>

@@ -2,5 +2,7 @@
 {
     public class PersonalDataStatus
     {
+        public string nameRus { get; set; }
+        public string nameEng { get; set; }
     }
 }
