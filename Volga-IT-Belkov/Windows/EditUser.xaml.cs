@@ -27,6 +27,8 @@ namespace Volga_IT_Belkov.Windows
             middleNameF.Text = App.currentUser.middleName;
             emailF.Text = App.currentUser.email;
             birthDateF.Text = App.currentUser.birthday.ToString("dd-MM-yyyy");
+            passportSeriesF.Text = App.currentUser.passportSeries;
+            passportNumberF.Text = App.currentUser.passportNumber;
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
@@ -36,6 +38,40 @@ namespace Volga_IT_Belkov.Windows
                 MessageBox.Show("Поля Фамилии, Имени и Email-а не могут быть пустыми!");
                 return;
             }
+            if (string.IsNullOrWhiteSpace(passportSeriesF.Text) || string.IsNullOrWhiteSpace(passportNumberF.Text))
+            {
+                MessageBox.Show("Поля серии и номера паспорта не могут быть пустыми!");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(birthDateF.Text))
+            {
+                MessageBox.Show("Поле даты рождения не может быть пустым");
+                return;
+            }
+
+            Models.EditUserRequest request = new()
+            {
+                birthday = birthDateF.Text,
+                firstName = firstNameF.Text,
+                lastName = lastNameF.Text,
+                middleName = middleNameF.Text,
+                numbers = App.currentUser.numbers,
+                passportSeries = passportSeriesF.Text,
+                passportNumber = passportNumberF.Text
+            };
+            try
+            {
+                Services.UserService.EditUser(request);
+                
+            }
+            catch(Exception ex)
+            {
+                
+            }
+
+            MessageBox.Show("Данные обновлены!");
+            this.Close();
+
         }
     }
 }

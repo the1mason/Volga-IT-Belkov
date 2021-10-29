@@ -19,6 +19,10 @@
             <TextBox x:Name="emailF" FontSize="17"/>
             <Label HorizontalAlignment="Center" Background="#fff" Panel.ZIndex="1000" Padding="5 0" FontSize="16" Margin="0 0 0 -8">Дата рождения</Label>
             <TextBox x:Name="birthDateF" FontSize="17"/>
+            <Label HorizontalAlignment="Center" Background="#fff" Panel.ZIndex="1000" Padding="5 0" FontSize="16" Margin="0 0 0 -8">Серия паспорта</Label>
+            <TextBox x:Name="passportSeriesF" FontSize="17"/>
+            <Label HorizontalAlignment="Center" Background="#fff" Panel.ZIndex="1000" Padding="5 0" FontSize="16" Margin="0 0 0 -8">Номер паспорта</Label>
+            <TextBox x:Name="passportNumberF" FontSize="17"/>
             <Button Margin="0 20 0 0" x:Name="Save" Click="Save_Click">Отправить</Button>
         </StackPanel>
     </Grid>

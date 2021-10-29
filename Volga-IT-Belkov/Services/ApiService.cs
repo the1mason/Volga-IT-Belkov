@@ -71,7 +71,7 @@ namespace Volga_IT_Belkov.Services
             request.Method = "PUT";
             if (!string.IsNullOrWhiteSpace(token))
                 request.Headers.Add($"Authorization: Bearer {token}");
-            request.ContentType = "text/json";
+            request.ContentType = "application/json";
             byte[] contentBytes = Encoding.UTF8.GetBytes(content);
             request.ContentLength = contentBytes.Length;
             using (Stream s = request.GetRequestStream())

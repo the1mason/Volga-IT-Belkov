@@ -24,5 +24,10 @@ namespace Volga_IT_Belkov.Services
 
             return user;
         }
+
+        public static void EditUser(Models.EditUserRequest editRequest)
+        {
+            ApiService.Put("https://volgait.simbirsoft.dev/api/v1/mobile/customer/profile", JsonConvert.SerializeObject(editRequest), App.loginData.token);
+        }
     }
 }

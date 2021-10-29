@@ -17,7 +17,7 @@ namespace Volga_IT_Belkov.Models
         public string lastName { get; set; }
         public string middleName { get; set; }
         public string passportSeries { get; set; }
-        public string passwordNumber { get; set; }
+        public string passportNumber { get; set; }
         public DateTime birthday { get; set; }
         public string imageUri { get; set; }
         public PersonalDataStatus personalDataStatus { get; set; }

@@ -49,13 +49,14 @@ namespace Volga_IT_Belkov.Windows
             try
             {
                 Services.RequestService.Send(request);
+                MessageBox.Show("Ваш запрос отправлен!\nНаши менеджеры рассмотрят Ваш запрос и свяжутся с вами по указанным контактным данным.");
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Ошибка сервера!\n" + ex.Message);
             }
 
-            MessageBox.Show("Ваш запрос отправлен!\nНаши менеджеры рассмотрят Ваш запрос и свяжутся с вами по указанным контактным данным.");
         }
     }
 }
