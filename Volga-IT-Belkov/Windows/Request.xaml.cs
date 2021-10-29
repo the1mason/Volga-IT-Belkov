@@ -32,7 +32,24 @@ namespace Volga_IT_Belkov.Windows
 
         private void SendButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Ничего не произошло! (кодер еще не сделал это)");
+            if(string.IsNullOrWhiteSpace(fioB.Text) || string.IsNullOrWhiteSpace(emailB.Text) || string.IsNullOrWhiteSpace(phoneNumberB.Text))
+            {
+                MessageBox.Show("Заполните все поля с личными данными:\n- ФИО (Фамилия Имя Отчество)\n- EMail (Электронная почта) \n- Номер телефона");
+                return;
+            }
+            Models.NewRequest request = new()
+            {
+                fio = fioB.Text,
+                email = emailB.Text,
+                comment = commentB.Text,
+                phoneNumber = phoneNumberB.Text,
+                type = "NEW",
+                productId = (productCb.SelectedItem as Models.ShortProduct).id
+            };
+
+                Services.RequestService.Send(request);
+
+            MessageBox.Show("Ваш запрос отправлен!\nНаши менеджеры рассмотрят Ваш запрос и свяжутся с вами по указанным контактным данным.");
         }
     }
 }

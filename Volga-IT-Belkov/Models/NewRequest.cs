@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Volga_IT_Belkov.Models
 {
-    class NewRequestRequest
+    class NewRequest
     {
         public string comment { get; set; }
         public string email { get; set; }
