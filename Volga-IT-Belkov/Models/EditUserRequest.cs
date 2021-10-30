@@ -15,5 +15,6 @@ namespace Volga_IT_Belkov.Models
         public List<Numbers> numbers { get; set; }
         public string passportNumber { get; set; }
         public string passportSeries { get; set; }
+        public int version { get; set; }
     }
 }

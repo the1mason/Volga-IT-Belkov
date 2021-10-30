@@ -57,7 +57,8 @@ namespace Volga_IT_Belkov.Windows
                 middleName = middleNameF.Text,
                 numbers = App.currentUser.numbers,
                 passportSeries = passportSeriesF.Text,
-                passportNumber = passportNumberF.Text
+                passportNumber = passportNumberF.Text,
+                version = 0
             };
             try
             {
@@ -66,7 +67,8 @@ namespace Volga_IT_Belkov.Windows
             }
             catch(Exception ex)
             {
-                
+                MessageBox.Show("Ошибка сервера:/n" + ex.Message);
+                return;
             }
 
             MessageBox.Show("Данные обновлены!");
